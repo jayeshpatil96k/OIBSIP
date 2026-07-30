@@ -36,21 +36,21 @@ def process_command(command):
         current_time = datetime.datetime.now().strftime("%I:%M %p")
         speak(f"The current time is {current_time}")
 
+        elif "open youtube" in command:
+    speak("Opening YouTube")
+    webbrowser.open("https://www.youtube.com")
+
+    elif "open github" in command:
+    speak("Opening GitHub")
+    webbrowser.open("https://github.com")
+
+    elif "open google" in command:
+    speak("Opening Google")
+    webbrowser.open("https://www.google.com")
+
     elif "date" in command:
         today = datetime.datetime.now().strftime("%d %B %Y")
         speak(f"Today's date is {today}")
-
-    elif "open youtube" in command:
-         speak("Opening YouTube")
-         webbrowser.open("https://www.youtube.com")
-
-    elif "open google" in command:
-        speak("Opening Google")
-        webbrowser.open("https://www.google.com")
-
-    elif "open github" in command:
-         speak("Opening GitHub")
-         webbrowser.open("https://github.com")
 
     elif "search" in command:
         query = command.replace("search", "")
